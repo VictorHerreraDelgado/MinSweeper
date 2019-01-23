@@ -77,11 +77,9 @@ public class BoardDisplay extends JPanel{
     public void drawCell(int x, int y){
         System.out.println("xxxxx");
         Button button = buttons.get(index(x, y));
-        //button.setCellState(cellState);
-        //if (!(cellState == CellState.NO_FLAGGED) && !(cellState == CellState.FLAGGED)){
-            //if (cellState == CellState.NUM)
-            button.setMinesAround(board.neighborsWithMines(x, y));
-            button.setEnabled(false);
+   
+        button.setMinesAround(board.neighborsWithMines(x, y));
+        button.setEnabled(false);
         
         repaint();
     }
